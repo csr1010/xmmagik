@@ -1,0 +1,103 @@
+   <!-- //registration module -->
+   <div  style="height:{{height}}">
+   <div class="form-signin affix " >
+   
+        <span  class="form-signin-heading"style="font-size: xx-large;">Please sign in</sapn>
+		<form name="logform" ng-controller ="registrationController">
+        <div class="input-group input-group " >
+				  <span class="input-group-addon" style="border-bottom: none;border-right: none;background: #fff;"><i class="glyphicon glyphicon-user"></i></span>
+				  <input required ng-model="userName" style="border-left: none;" type="text" maxlength = 6 class="form-control" placeholder="Employee ID" autofocus>
+		</div>
+		<div class="input-group input-group ">
+				  <span class="input-group-addon" style="border-right: none;background: #fff;"><i class="glyphicon glyphicon-eye-close"></i></span>
+				  <input required ng-model="password" style="border-left: none;" type="password" class="form-control" placeholder="Password">
+		</div>
+        
+        
+        <button  ng-click="signIn()"style="margin-top: 5%;" class="btn btn-lg btn-primary btn-block" type="submit" id = signIN><i class="glyphicon glyphicon-heart" style="
+    color: red;
+"></i> LO<span style="
+    font-size: smaller;
+    color: rgb(85, 8, 8);
+    text-decoration: line-through;
+"> ve </span>G in </button>
+        <div class=nav1></div>
+        <hr>
+        <button ng-click="register()"  class="btn btn-lg btn-default btn-block" type="submit">Register</button>
+           <div class=nav2></div>
+        </form>
+      </div>
+      <!-- //registration module -->   
+      
+      <div class="container col-lg-4 col-md-6 col-sm-6 parallaxCont"></div>
+      <div class="container col-lg-8 col-md-6 col-sm-6 parallaxCont">
+      <div style="position:absolute" class="innerParallax">
+      
+         
+          <div id = "howitworks" style="margin-left:20%;width:250px;position:fixed;z-index: 999999999;margin-bottom: 85px;font-family:litFont;font-size:xx-large;text-align: center;">What is this App about and HOW IT WORKS ? </div>
+          <div id = "howitworks_downArrow" style="position: fixed;margin-left: 25%;top: 37%;"class= downarrowleft></div>
+          
+         <div id="titledescription"style="width:550px;right: -100%;position:fixed;top:50%;color:rgb(36, 155, 160);;text-align: center;font-family:litFont;font-size:50px;text-align: center;">Exam-Magik 'More sleek and Intuitive Application' </div>
+         <div style="margin-left: 30%;"class= downarrowritt></div>
+         
+         <div id = signINmessage style="position: fixed;top: 25%;left: -100%;">
+         <div style="text-align: center;width: 250px;font-family:litFont;color: rgb(1, 70, 1);font-size: xx-large;"> Please sign in to the Exam-Magik App </div>
+         <div style="margin-bottom:95px">Oh..forgot to ask !! did u Register ??</div>
+         </div>
+         <div style="margin-left: 20%;" class= downarrowritt></div>
+         
+         
+         <div id= regMesg style="margin-bottom:20px;text-align: center;top: -45%;position:fixed;width: 200px;font-family:litFont;color: rgb(1, 70, 1);font-size: xx-large;">Register yourself and then sign-in </div>
+        <!--  <div class= downarrowritt style="margin-left:9%"></div> -->
+        
+         
+         <div id= "Iamadmin"class="adjusttext1"  style="/* display: inline-flex; */position: fixed;left: 0;top: -100px;text-align: center;width: 300px;font-family:litFont;color: rgb(0, 143, 255);font-size: xx-large;">I am the Administrator ,who creates Exam Modules </div>
+         <div id= "IamadminICON" style="right:-15%;top: -45%;position: fixed;color:rgb(67, 182, 247);font-size: 125px;"><i class="glyphicon glyphicon-user"></i> </div>
+        <!--  <div class= downarrowleft></div> -->
+         
+         <div  id="takethemAllicon" style="position: fixed;left: 44%;top: -100px;color:rgb(190, 154, 166);font-size: 125px;"><i class="glyphicon glyphicon-save"></i> </div>
+         <div id="takethemAll" class="adjusttext2"  style="position: fixed;text-align: center;width: 200px;font-family:litFont;color: rgb(136, 9, 65);font-size: xx-large;right: 20%;bottom: -100%;"> I take them all and save the questions in DataBase </div>
+        <!--  <div class= downarrowritt></div> -->
+         
+         <div id = examscheduler class="adjusttext1"  style="/* display: inline-flex; */top: 145%;left: 0%;position: fixed;text-align: center;width: 270px;font-family:litFont;color:rgb(170, 118, 6);font-size: xx-large;">I schedule the  date of Exam and announce it... </div>
+         <div  id = examschedulericon style="right: 0%;top: 145%;position: fixed;color:rgb(247, 161, 67);font-size: 125px;"><i class="glyphicon glyphicon-calendar"></i> </div>
+        <!--  <div class= downarrowleft style="margin-left: 20%;"></div> -->
+         
+         <div id = "attendees"style="position: fixed;top:20%;left:-50%;text-align: center;margin:5px;">
+	         <span style="border-bottom: 1px solid;">
+	         <i style="color:rgb(142, 88, 179);;" class="glyphicon glyphicon-user indUser1 commonclass"></i> 
+	         <i style="color:rgb(26, 170, 6);;"class="glyphicon glyphicon-user indUser2 commonclass"></i> 
+	         <i style="color: rgb(144, 170, 6);"class="glyphicon glyphicon-user indUser3 commonclass"></i> 
+	          </div> 
+	         </span>
+	        <!--  <div class= downarrowritt style="margin-left: 65%;"></div> -->
+	         
+	         <div id = examtakericon style="position: fixed;left: 44%;top: -100px;color:rgb(101, 214, 73);font-size: 125px;"><i class="glyphicon glyphicon-list-alt"></i> </div>
+	         <div id = examtaker class="adjusttext2" style="position: fixed;right: 20%;bottom: -100%;text-align: center;width: 270px;font-family:litFont;color:rgb(110, 192, 34);;font-size: xx-large;">Candidates attend and take their Respective Registered Exam</div>
+	      <!--   <div class= downarrowleft></div> -->
+	        
+          <div id = timeup class="adjusttext1" style="top: 45%;left:45%;position: fixed;/* display: inline-flex; */text-align: center;width: 270px;font-family:litFont;color:rgb(243, 37, 161);font-size: xx-large;">Time Up !! and now Exam is done,data goes backend for Evaluation</div>
+          <div id = timeupicon  style="top: 45%;left: 70%;position: fixed;color:rgb(247, 67, 161);font-size: 125px;"><i class="glyphicon glyphicon-time"></i> </div>
+       <!--    <div class= downarrowritt></div> -->
+          
+          <div id = evalicon   style="top: 45%;left:50%;position: fixed;color:rgb(190, 154, 166);font-size: 125px;"><i class="glyphicon glyphicon-thumbs-up"></i></div>
+          <div id = eval  class="adjusttext2"  style="top: 45%;left:50%;position: fixed;text-align: center;width: 360px;font-family:litFont;color:rgb(26, 77, 10);font-size: xx-large;"> Our super Evaluator ,MR Computer evaluates and send back Results to Candidates along with correct answers.</div>
+       <!--    <div class= downarrowleft style="margin-left: 45%;"></div> -->
+          
+            
+          <div id=thanks class=" adjusttext1"style=";position:fixed;text-shadow: 2px 2px 10px rgb(0, 87, 241);margin-left:15%;text-align: center;width: 300px;font-family:litFont;color:rgb(21, 133, 88);;font-size: xx-large;">
+	           <!-- <div id = thanksicon   style="font-size: 125px;"><i id = "" class="glyphicon glyphicon-chevron-up"></i></div> -->
+	           <img style="margin-left: 25%;display: block;"src="images/par.gif">
+	           Finally ... Thank u  for reading the boring stuff which is pretty known to all of us-<br>App by Vote Magik Team
+           </div>
+           
+           <!--<div id = cloudbase class="runningclouds"style="position: fixed;z-index: 999999;top: 68px;">
+           </div>
+            <div id = planeflying><i class="glyphicon glyphicon-plane"></i></div> -->
+			<div style="-webkit-transform: scale(15);transform: scale(15); bottom: 165px;/* zoom: 2; *//* top: 311px; */position: fixed;left:10%;z-index:-90; color: rgb(106, 209, 106);"><i class="glyphicon glyphicon-tree-deciduous"></i></div>
+			<div class=male></div>
+			<div class=female></div>
+			<div class=lovedub><i class="glyphicon glyphicon-heart"> </i></div>
+         </div> 
+      </div>
+      </div>

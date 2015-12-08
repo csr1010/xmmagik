@@ -1,0 +1,12 @@
+
+
+  <table class="table table-striped">
+    <tr> <td colspan=6 align=center> <input class="form-control"type=text ng-model = "filters" placeholder="search"></td><tr>
+    <tr> <td>EmpID </td><td><b style='color:red'>RANK</b> </td><td> Marks / 100 </td><td> ExamID </td> <td> attempts </td> <td> date </td> </tr>
+    <tr ng-repeat = "i in results | filter:filters | orderBy:'exams[0].marks':true">
+	    <td>{{i.empid}} </td><td><b style='color:red'>{{$index+1}} </b></td><td>{{i.exams[0].marks}} </td><td>{{i.exams[0].examid}} </td><td>{{i.exams[0].attempts}} </td><td>{{i.exams[0].examdate}} </td>
+    </tr>
+  </table>
+
+
+

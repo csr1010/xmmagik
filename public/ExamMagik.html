@@ -1,0 +1,57 @@
+<!DOCTYPE>
+<html>
+<head>
+<!-- <base href="/Questionarie/" /> -->
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<title>Questions</title>
+<link rel="stylesheet" href="css/bootstrap.min.css" />
+<link rel="stylesheet" href="css/bootstrap-theme.css" />
+<link rel="stylesheet" href="css/font-awesome.min.css" />
+<link rel="stylesheet" href="css/questions.css" />
+<link rel="stylesheet" href="css/timer.css" />
+</head>
+<body ng-app = "xammagikApp" class=fallinglove>
+<div class="navbar navbar-default navbar-fixed-top">
+      <div class="container">  
+	  <div class="navbar-header">
+	  <a class="navbar-brand imagePerspective" id = appName href="#"><img class="imagelogo" src = "images/xmlogo1.jpg"></a>
+      </div>
+	  <ul class="btn-group pull-right" id="headerInfo" >
+	  
+	  <li><a href="#home" type="button" class="userdetail btn btn-default"><i class='glyphicon glyphicon-off'></i></a></li>
+	  <li><button type="button" class="logoff btn btn-default"><i class='glyphicon glyphicon-user'></i></button></li>
+	</ul>
+	  </div>
+</div>
+		<div class="alert alert-success fade" style="text-align: center;width: 100%;position: fixed;bottom: -19px;font-size: larger;">
+		    <small></small>
+		</div>
+		<div class="alert alert-danger fade" style="text-align: center;width: 100%;position: fixed;bottom: -19px;font-size: larger;">
+		    <small></small>
+		</div>
+<div ng-view   class="container bodyContainer" style="padding: 0;margin: 0 3%;max-width: 1300px !important;width: 1300px;" >  <!-- ng-view -->
+
+</div>
+
+</body>
+<script type="text/javascript" src="js/libs/jquery-min.js"></script>
+<script type="text/javascript" src="js/libs/scroll.js"></script>
+<script type="text/javascript" src="js/libs/angular.min.js"></script>
+<script type="text/javascript" src="js/libs/angular-sanitize.min.js"></script>
+<script type="text/javascript" src="js/libs/angular-route.min.js"></script>
+<!-- <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.10/angular.min.js"></script> -->
+<script type="text/javascript" src="js/libs/bootstrap.js"></script>
+<script type="text/javascript" src="js/app.js"></script>
+<script type="text/javascript" src="js/controllers/registration.js"></script>
+<script type="text/javascript" src="js/controllers/dashboard.js"></script>
+<script type="text/javascript" src="js/controllers/answer.js"></script>
+<script type="text/javascript" src="js/controllers/results.js"></script>
+<script type="text/javascript" src="js/routers/router.js"></script>
+<script type="text/javascript" src="scrollMagik.js"></script>
+<script src="/socket.io/socket.io.js"></script>
+<script>
+//var io= require('socket.io-client');
+window.socket = io.connect();
+
+</script>
+</html>

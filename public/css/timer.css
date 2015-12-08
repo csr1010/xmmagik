@@ -1,0 +1,157 @@
+ .pie {
+		position:absolute;
+		width:100px;
+		height:200px;
+		overflow:hidden;
+		left:150px;
+		-moz-transform-origin:left center;
+		-ms-transform-origin:left center;
+		-o-transform-origin:left center;
+		-webkit-transform-origin:left center;
+		transform-origin:left center;
+		
+		
+	}
+	.pie:BEFORE {
+	background-color:#f5f5f5;
+	border: 1px solid rgba(211, 211, 211, 0.94);
+	
+border-right: none;
+		content:"";
+		position:absolute;
+		width:100px;
+		height:200px;
+		left:-100px;
+		border-radius:100px 0 0 100px;
+		-moz-transform-origin:right center;
+		-ms-transform-origin:right center;
+		-o-transform-origin:right center;
+		-webkit-transform-origin:right center;
+		transform-origin:right center;
+		
+	}
+	.dies:before{
+	z-index: -5;
+-webkit-transform: rotateY(180deg);
+transform: rotateY(180deg);
+border: 5px solid rgb(55, 201, 143);;
+border-right: none;
+	}
+	
+		.pie:AFTER {
+		content:"";
+		position:absolute;
+		width:100px;
+		height:200px;
+		left:100px;
+		border-radius:0 100px 100px 0;
+	}
+		.pie[data-start="0"] {
+		-moz-transform: rotate(180deg); /* Firefox */
+		-ms-transform: rotate(180deg); /* IE */
+		-webkit-transform: rotate(180deg); /* Safari and Chrome */
+		-o-transform: rotate(180deg); /* Opera */
+		transform:rotate(180deg);
+	
+	}
+		.pie[data-value="0"]:BEFORE {
+		
+		-moz-transform: rotate(180deg); /* Firefox */
+		-ms-transform: rotate(180deg); /* IE */
+		-webkit-transform: rotate(180deg); /* Safari and Chrome */
+		-o-transform: rotate(180deg); /* Opera */
+		transform:rotate(180deg);
+			-webkit-animation: mystyle_timer 1800s   linear 1800s ;
+     -moz-animation: mystyle_timer 1800s     linear 1800s ;
+      -ms-animation: mystyle_timer 1800s     linear 1800s ;
+       -o-animation: mystyle_timer 1800s     linear 1800s ;
+          animation: mystyle_timer 1800s   linear 1800s ;
+          
+	    -webkit-animation-fill-mode: forwards;
+	-moz-animation-fill-mode: forwards;
+	-o-animation-fill-mode: forwards;
+	animation-fill-mode: forwards;
+	}
+	
+		.pie[data-value="180"]:BEFORE {
+		-moz-transform: rotate(180deg); /* Firefox */
+		-ms-transform: rotate(180deg); /* IE */
+		-webkit-transform: rotate(180deg); /* Safari and Chrome */
+		-o-transform: rotate(180deg); /* Opera */
+		transform:rotate(180deg);
+			-webkit-animation: mystyle_timer 1800s    linear ;
+     -moz-animation: mystyle_timer 1800s     linear ;
+      -ms-animation: mystyle_timer 1800s     linear ;
+       -o-animation: mystyle_timer 1800s     linear ;
+          animation: mystyle_timer 1800s   linear ;
+          
+	    -webkit-animation-fill-mode: forwards;
+	-moz-animation-fill-mode: forwards;
+	-o-animation-fill-mode: forwards;
+	animation-fill-mode: forwards;
+	}
+	.pie1{
+	-moz-transform: rotate(180deg); /* Firefox */
+		-ms-transform: rotate(180deg); /* IE */
+		-webkit-transform: rotate(180deg); /* Safari and Chrome */
+		-o-transform: rotate(180deg); /* Opera */
+		transform:rotate(180deg);
+	}
+	@-webkit-keyframes mystyle_timer{
+  0% {
+		-moz-transform: rotate(180deg); /* Firefox */
+		-ms-transform: rotate(180deg); /* IE */
+		-webkit-transform: rotate(180deg); /* Safari and Chrome */
+		-o-transform: rotate(180deg); /* Opera */
+		transform:rotate(180deg);
+  }
+  100% {
+		-moz-transform: rotate(360deg); /* Firefox */
+		-ms-transform: rotate(360deg); /* IE */
+		-webkit-transform: rotate(360deg); /* Safari and Chrome */
+		-o-transform: rotate(360deg); /* Opera */
+		transform:rotate(360deg);
+  }
+}
+	@-moz-keyframes mystyle_timer{
+  0% {
+		-moz-transform: rotate(180deg); /* Firefox */
+		-ms-transform: rotate(180deg); /* IE */
+		-webkit-transform: rotate(180deg); /* Safari and Chrome */
+		-o-transform: rotate(180deg); /* Opera */
+		transform:rotate(180deg);
+  }
+  100% {
+		-moz-transform: rotate(360deg); /* Firefox */
+		-ms-transform: rotate(360deg); /* IE */
+		-webkit-transform: rotate(360deg); /* Safari and Chrome */
+		-o-transform: rotate(360deg); /* Opera */
+		transform:rotate(360deg);
+  }
+}
+	@keyframes mystyle_timer{
+  0% {
+		-moz-transform: rotate(180deg); /* Firefox */
+		-ms-transform: rotate(180deg); /* IE */
+		-webkit-transform: rotate(180deg); /* Safari and Chrome */
+		-o-transform: rotate(180deg); /* Opera */
+		transform:rotate(180deg);
+  }
+  100% {
+		-moz-transform: rotate(360deg); /* Firefox */
+		-ms-transform: rotate(360deg); /* IE */
+		-webkit-transform: rotate(360deg); /* Safari and Chrome */
+		-o-transform: rotate(360deg); /* Opera */
+		transform:rotate(360deg);
+  }
+}
+.timer{
+font-weight: 800;
+	color: rgb(55, 201, 143);
+font-size: xx-large;
+font-family: questionFont;
+z-index: 9999999;
+margin-top: 24%;
+margin-left: -5%;
+text-align: center;
+}

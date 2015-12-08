@@ -1,0 +1,102 @@
+   <div class="container col-lg-3 cont1" style="opacity: 0.8;transition:opacity linear 0.25s">
+		    <!-- <div class="sidebar">
+		            <ul class="nav" style="font-size: larger;">
+		             <li ng-click = "activateNav(i)" ng-repeat ="i in Navleft">
+		                <a class="{{i.status}}" href="#" style="color:{{i.color}}"><i class="glyphicon {{i.icon}}"></i> {{i.Name}}</a>
+		             </li>
+		    		</ul>
+		    </div> -->
+		      <section class="graphics"> 
+				      <span class="largeFont" style="color:rgb(223, 110, 159)"><i class="glyphicon glyphicon-stats"></i> LIVE ! METRIKS</span>
+				  
+				   <div> My Score :{{finalmarks}} / out of  40</div>
+				   
+				  <div style="margin: 15% 0;height: 1px;width: 100%;background:rgb(187, 187, 187);">
+					<i style="left:{{personPlacer}}px" class="glyphicon glyphicon-user slideperson"></i>
+				  </div>
+				  
+				   <div class="ground" style="margin-right:10px;width: 50px;display:inline-block;background: {{currentMarks.metriks['A0'].color}};height:{{currentMarks.metriks['A0'].percnt * 5 }}px;">
+				   		<div ng-show ="currentMarks.metriks['A0'].pers > 0 "style="color: rgb(28, 6, 116);text-align: center;width: 50px;position:absolute;/* border-top: 3px solid  rgb(148, 148, 118); */">{{currentMarks.metriks['A0'].pers}}</div>
+				   </div>
+				   
+				   <div class="ground"style="margin-right:10px;width: 50px;display:inline-block;background: {{currentMarks.metriks['A11'].color}};height:{{currentMarks.metriks['A11'].percnt * 5 }}px;">
+				   		<div ng-show ="currentMarks.metriks['A11'].pers > 0 "style="color: rgb(28, 6, 116);text-align: center;width: 50px;position:absolute;/* border-top: 3px solid  rgb(148, 148, 118); */">{{currentMarks.metriks['A11'].pers}}</div>
+				   </div>
+				   
+				   <div class="ground" style="margin-right:10px;width: 50px;display:inline-block;background: {{currentMarks.metriks['A21'].color}};height:{{currentMarks.metriks['A21'].percnt * 5 }}px;">
+				   		<div ng-show ="currentMarks.metriks['A21'].pers > 0 "style="color: rgb(28, 6, 116);text-align: center;width: 50px;position:absolute;/* border-top: 3px solid  rgb(148, 148, 118); */">{{currentMarks.metriks['A21'].pers}}</div>
+				   </div>
+				   
+				   <div class="ground" style="margin-right:10px;width: 50px;display:inline-block;background: {{currentMarks.metriks['A31'].color}};height:{{currentMarks.metriks['A31'].percnt * 5 }}px;">
+				   		<div ng-show ="currentMarks.metriks['A31'].pers > 0 " style="color: rgb(28, 6, 116);text-align: center;width: 50px;position:absolute;/* border-top: 3px solid  rgb(148, 148, 118); */">{{currentMarks.metriks['A31'].pers}}</div>
+				   </div>
+				   
+				  
+				   <div>   
+					   <div style="margin-right:10px;width: 50px;display:inline-block;border-top:3px solid  rgb(235, 216, 255);">0-10</div>
+					   <div style="margin-right:10px;width:50px;display:inline-block;border-top:3px solid   rgb(204, 255, 194);">11-20</div>
+					   <div style="margin-right:10px;width:50px;display:inline-block;border-top:3px solid   rgb(245, 231, 187);">21-30</div>
+					   <div style="margin-right:10px;width:50px;display:inline-block;border-top:3px solid  rgb(221, 226, 255);">30-40</div>
+				   </div>
+    </section>
+   </div>
+   
+    
+   
+   <div class="container col-lg-6" >
+ 
+			<ul class="nav nav-tabs" style="margin-left: 12%;">
+			  <li><a ng-click="filterExams='completed'"style="color: rgb(113, 199, 117);;"href="" data-toggle="tab"> <i class= "glyphicon glyphicon-ok-sign"></i> COMPLETED</a></li>
+			  <li  class="active"><a ng-click="filterExams=''"href="" data-toggle="tab"> <i class= "glyphicon glyphicon-align-justify"></i> ALL EXAMS</a></li>
+			  <li><a ng-click="filterExams='future'" style="color:rgb(248, 121, 121);"href="" data-toggle="tab"> <i class= "glyphicon glyphicon-share-alt"></i> UPCOMING</a></li>
+			</ul>
+		  <div style="border-bottom:1px solid #519CFC">	</div>
+		  
+   <div class="tab-content">
+   <div style="margin:2% 0"><input ng-model = "filterExams"type=text class="form-control" placeholder="search Exams""></div>
+	  <div class="tab-pane active fade in tabPane" id="ALL">
+	  
+	    
+	     <div class="col-lg-9 {{i.status}}" ng-init="iconia =''" ng-repeat ="i in ExamsList | filter:filterExams" >
+	        <div> Exam ID : {{i._id}} <i class= "glyphicon {{i.iconia}} "></i></div>
+	        <div class="largeFont"> {{i.Name}} </div>
+	        <span > <i class= "glyphicon glyphicon-calendar"></i> {{i.date}}</span>
+	        <span style="float: right;margin: 5px;"><button ng-click="getMetriks(i)"class="btn btn-default" ng-show="i.status =='completed'">Metriks / Kmnts..</button>
+	        </span>
+	        <span style="float: right;margin: 5px;"><button ng-click="getExam(i)" class="btn btn-default"  ng-show="i.status !='completed'">Take Exam</button>
+	        </span>
+	        
+	     </div>
+	     
+	  </div>
+   </div>
+   </div>
+   
+   
+   
+   
+   
+   
+   
+   
+   
+  <div class="container col-lg-3 cont3" style="overflow-x: hidden;overflow-y: auto;height: 380px;opacity: 0.8;transition:opacity ease 0.25s">
+  <span class="largeFont " style="color:rgb(54, 148, 148);"><i class="glyphicon glyphicon-comment"></i> KOMENTS</span>
+   <section>
+    
+      <section class=commentsZone>
+      <ol class="conversation">
+		    <li class="li {{i.other}}"ng-repeat = "i in currentMarks.comments">
+		     <i class="glyphicon glyphicon-play {{i.other}}"></i>
+		      <div class="message {{i.other}}">
+		        <p><span style="display: block;color: rgb(32, 148, 202);font-size:smaller;">{{i._id}}</span>{{i.comment}}</p>
+		      </div>
+		    </li>
+      </ol>
+      </section>
+     
+   </section>
+  
+   </div>
+<textarea disabled style="height: 75px;margin: 35% 0px 0 5px;width: 285px;" class=" form-control" > not yet done ..coming soon..!!!!</textarea>
+<button class="col-lg-3 pull-right btn btn-primary"><i class="glyphicon glyphicon-send"> </i> send</button>

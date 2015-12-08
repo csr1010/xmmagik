@@ -1,0 +1,52 @@
+<div class="container col-lg-3">
+				<div class="dies pie pie1" data-start="0" data-value="1"></div>
+	            <div class="pie pie1" data-start="0" data-value="0"></div>
+				
+	           
+				  <div class=" pie pie2"  data-value="180"></div>
+				   <div class=" dies pie pie2"  data-value="181"></div>
+	            
+	          <div id = stopWatch class="col-lg-12 timer" >{{hrs}} <sup style="font-size: x-small;top: -2.65em;">hr</sup> {{mnts}} <sup style="top: -2.65em;font-size: x-small;">min</sup> <small style="font-size: 55%;
+color: rgb(194, 194, 194);
+font-weight: normal;
+}">{{sec}} </small>  </div>
+	          
+	          
+	          <div class="affix endtestdiv" >
+	          	<button class="btn btn-primary" ng-click="savetest()">Finish The Exam</button>
+	          </div>
+	          
+	          <section class="instructions">
+	           <header style="color: black;text-align: center;">Instructions</header>
+		            <li>Total Time : 1 hour</li>
+		            <li>Please dont use search Engines to search answers ,if found exam stops automatically prior warnings..</li>
+		            <li>you can navigate to any question by clicking the question no: on right side</li>
+		            <li>the question, if  answered turns green else remains white</li>
+	          </section>
+</div>
+<div id= examContainer class="container col-lg-7" style="overflow-x: hidden;overflow-y: auto;height: 500px;" >
+  <div class= qstionsset id = "{{id._id}}"ng-repeat = "id in test.Questions" >
+     
+     <span class="numbrcounter">{{$index+1}}</span>
+	 	 <div style="color:rgb(57, 106, 160);font-size: medium;margin-left: 3%;" ng-bind-html= "id.qstion"></div>
+	 <img ng-if='id.image' src= "{{id.imgurl}}" style=" width: 50%; height: 30%; "> 
+     
+     <label style="margin-left: 6%;font-weight: 400;color: gray;" ng-switch ='id.type' class="{{id.type }}"ng-repeat = "j in id.options">
+     
+     <input ng-switch-when="radio" ng-click = "updatepager(id._id)" type="radio" ng-model="id.result" value={{j.val}}>
+     
+     <input ng-switch-when="checkbox"   ng-click = "updatepager(id._id)" type="checkbox" ng-model="j.val" value={{j.val}}>
+     
+     
+    {{j.option}}</label>
+  </div>
+
+</div>
+<div class="container col-lg-2" style="text-align:center;" >
+	<ul  class="pagination pagination-sm" style="margin:0px">
+		 <li ng-repeat = "key in test.Questions">
+		 <a href= "" id = "a{{key._id}}" ng-if ="$index <9"ng-click="scrollTo(key._id)" >0{{ $index+1}}</a>
+		  <a href= "" id = "a{{key._id}}" ng-if = "$index >=9"ng-click="scrollTo(key._id)" >{{ $index+1}}</a>
+		 </li>
+	</ul>
+</div>
