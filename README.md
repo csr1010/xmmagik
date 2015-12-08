@@ -6,6 +6,12 @@ https://github.com/csr1010/xmmagik
 herokuapp:
 http://exammagik.herokuapp.com/#/home
 
+register into the app or 
+give this following credentials
+
+empid 533135  
+paswd 123
+
 Technologies:
 Angular,Node,Mongodb,sockets,HTML5 advanced concepts,cache storage
 
